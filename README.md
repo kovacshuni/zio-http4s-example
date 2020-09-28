@@ -2,11 +2,11 @@
 
 Here's how to put toghether almost the simplest [http4s](https://http4s.org/) server with [ZIO](https://zio.dev/).
 
-### Run: 
+### Run:
 
 `sbt run`
 
-### Try: 
+### Try:
 
 `curl localhost:8080/hello`
 
@@ -57,7 +57,7 @@ object Main extends zio.App {
           .resource
           .toManagedZIO
           .useForever
-          .foldCauseM(            
+          .foldCauseM(
             err => putStrLn(err.prettyPrint).as(ExitCode.failure),
             _ => ZIO.succeed(ExitCode.success)
           )

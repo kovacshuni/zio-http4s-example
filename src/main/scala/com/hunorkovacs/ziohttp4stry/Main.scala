@@ -31,7 +31,7 @@ object Main extends App {
           .resource
           .toManagedZIO
           .useForever
-          .foldCauseM(            
+          .foldCauseM(
             err => putStrLn(err.prettyPrint).as(ExitCode.failure),
             _ => ZIO.succeed(ExitCode.success)
           )
