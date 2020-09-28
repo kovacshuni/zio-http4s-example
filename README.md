@@ -2,11 +2,15 @@
 
 Here's how to put toghether almost the simplest [http4s](https://http4s.org/) server with [ZIO](https://zio.dev/).
 
-Run: `sbt run`
+### Run: 
 
-Try: `curl localhost:8080/hello`
+`sbt run`
 
-Dependencies:
+### Try: 
+
+`curl localhost:8080/hello`
+
+### Dependencies:
 
 ```scala
     "org.http4s"      %% "http4s-blaze-server" % "1.0.1",
@@ -15,7 +19,7 @@ Dependencies:
     "dev.zio"         %% "zio-interop-cats"    % "2.1.4.0"
 ```
 
-Code:
+### Code:
 
 ```scala
 package com.hunorkovacs.ziohttp4stry
