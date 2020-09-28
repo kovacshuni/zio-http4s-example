@@ -10,9 +10,7 @@ import org.http4s.dsl.Http4sDsl
 import org.http4s.implicits._
 import org.http4s.server.blaze.BlazeServerBuilder
 
-import scala.concurrent.ExecutionContext.Implicits.global
-
-object Main extends zio.App {
+object Main extends App {
 
   private val dsl = Http4sDsl[Task]
   import dsl._
@@ -27,7 +25,7 @@ object Main extends zio.App {
     ZIO
       .runtime[ZEnv]
       .flatMap { implicit runtime =>
-        BlazeServerBuilder[Task](global)
+        BlazeServerBuilder[Task](runtime.platform.executor.asEC)
           .bindHttp(8080, "localhost")
           .withHttpApp(helloWorldService)
           .resource
