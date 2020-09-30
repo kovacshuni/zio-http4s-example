@@ -1,4 +1,4 @@
-# ZIO HTTP4s Simple Example
+# ZIO http4s Simple Example
 
 Here's how to put toghether almost the simplest [http4s](https://http4s.org/) server with [ZIO](https://zio.dev/).
 
@@ -34,9 +34,7 @@ import org.http4s.dsl.Http4sDsl
 import org.http4s.implicits._
 import org.http4s.server.blaze.BlazeServerBuilder
 
-import scala.concurrent.ExecutionContext.Implicits.global
-
-object Main extends zio.App {
+object Main extends App {
 
   private val dsl = Http4sDsl[Task]
   import dsl._
@@ -51,7 +49,7 @@ object Main extends zio.App {
     ZIO
       .runtime[ZEnv]
       .flatMap { implicit runtime =>
-        BlazeServerBuilder[Task](global)
+        BlazeServerBuilder[Task](runtime.platform.executor.asEC)
           .bindHttp(8080, "localhost")
           .withHttpApp(helloWorldService)
           .resource
@@ -64,9 +62,8 @@ object Main extends zio.App {
       }
 
 }
-
 ```
 
 ### random keywords:
-zio, instead of cats, cats-effect, final tagless, managed, resource, http server, http4s, effect tracking, typesafe,
+zio, instead of cats, cats-effect, final tagless, http4s, http server, managed, resource, effect tracking, typesafe,
 strongly typed, functional, monad
