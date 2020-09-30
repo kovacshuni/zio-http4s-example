@@ -1,8 +1,4 @@
 val Http4sVersion  = "1.0.0-M4"
-val ZioVersion     = "1.0.1"
-val CirceVersion   = "0.13.0"
-val Specs2Version  = "4.10.0"
-val LogbackVersion = "1.2.3"
 
 lazy val root = (project in file("."))
   .settings(
@@ -13,7 +9,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "org.http4s" %% "http4s-blaze-server" % Http4sVersion,
       "org.http4s" %% "http4s-dsl"          % Http4sVersion,
-      "dev.zio"    %% "zio"                 % ZioVersion,
+      "dev.zio"    %% "zio"                 % "1.0.1",
       "dev.zio"    %% "zio-interop-cats"    % "2.1.4.0"
     )
   )
