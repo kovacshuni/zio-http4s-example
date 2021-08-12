@@ -7,3 +7,4 @@ project/target
 .vscode/
 project/.bloop/
 project/metals.sbt
+.bsp/sbt.json
