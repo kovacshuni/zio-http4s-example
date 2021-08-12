@@ -1,6 +1,6 @@
 # ZIO http4s Simple Example
 
-Here's how to put toghether almost the simplest [http4s](https://http4s.org/) server with [ZIO](https://zio.dev/).
+Here's how to put together almost the simplest [http4s](https://http4s.org/) server with [ZIO](https://zio.dev/).
 
 ### Run:
 
@@ -13,10 +13,10 @@ Here's how to put toghether almost the simplest [http4s](https://http4s.org/) se
 ### Dependencies:
 
 ```scala
-"org.http4s" %% "http4s-blaze-server" % "1.0.0-M4",
-"org.http4s" %% "http4s-dsl"          % "1.0.0-M4",
-"dev.zio"    %% "zio"                 % "1.0.1",
-"dev.zio"    %% "zio-interop-cats"    % "2.1.4.0"
+"org.http4s" %% "http4s-blaze-server" % "1.0.0-M24",
+"org.http4s" %% "http4s-dsl"          % "1.0.0-M24",
+"dev.zio"    %% "zio"                 % "1.0.10",
+"dev.zio"    %% "zio-interop-cats"    % "3.1.1.0"
 ```
 
 ### Code:
