@@ -1,7 +1,6 @@
 package com.hunorkovacs.ziohttp4stry
 
 import zio._
-import zio.console._
 import zio.interop.catz._
 import zio.interop.catz.implicits._
 import org.http4s._
@@ -24,7 +23,7 @@ object Main extends App {
     ZIO
       .runtime[ZEnv]
       .flatMap { implicit runtime =>
-        BlazeServerBuilder[Task](runtime.platform.executor.asEC)
+        BlazeServerBuilder[Task]
           .bindHttp(8080, "localhost")
           .withHttpApp(helloWorldService)
           .resource
