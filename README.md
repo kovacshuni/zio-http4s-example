@@ -13,10 +13,10 @@ Here's how to put together almost the simplest [http4s](https://http4s.org/) ser
 ### Dependencies:
 
 ```scala
-"org.http4s" %% "http4s-blaze-server" % "1.0.0-M24",
-"org.http4s" %% "http4s-dsl"          % "1.0.0-M24",
-"dev.zio"    %% "zio"                 % "1.0.10",
-"dev.zio"    %% "zio-interop-cats"    % "3.1.1.0"
+"org.http4s" %% "http4s-blaze-server" % "1.0.0-M32",
+"org.http4s" %% "http4s-dsl"          % "1.0.0-M32",
+"dev.zio"    %% "zio"                 % "1.0.13",
+"dev.zio"    %% "zio-interop-cats"    % "3.2.9.1"
 ```
 
 ### Code:

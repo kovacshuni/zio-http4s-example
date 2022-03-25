@@ -3,7 +3,7 @@ val Http4sVersion  = "1.0.0-M32"
 lazy val root = (project in file("."))
   .settings(
     organization := "com.hunorkovacs",
-    name := "zio-http4s-try",
+    name := "zio-http4s-example",
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.13.8",
     libraryDependencies ++= Seq(
